@@ -12,7 +12,7 @@ import Favorite from "../screens/Favorite";
 const Stack = createStackNavigator();
 
 export default function StackNavigation(props){
-    console.log(props);
+    //console.log(props);
     const{navigation} = props;
 
 
@@ -66,3 +66,5 @@ export default function StackNavigation(props){
         </Stack.Navigator>
     )
 }
+
+

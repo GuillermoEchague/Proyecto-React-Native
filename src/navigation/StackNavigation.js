@@ -49,7 +49,7 @@ export default function StackNavigation(props){
             options={{title: 'TheMovieApp', headerLeft: ()=> buttonLeft("home"), headerRight: ()=>buttonRight()}} />
             
             <Stack.Screen name="movie" component={Movie} 
-            options={{title: '', headerLeft: ()=> buttonLeft("movie"), headerRight: ()=>buttonRight()}} />
+            options={{title: '', headerTransparent:true, headerLeft: ()=> buttonLeft("movie"), headerRight: ()=>buttonRight()}} />
             
             <Stack.Screen name="news" component={News} 
             options={{title: 'Nuevas Peliculas', headerLeft: ()=> buttonLeft("news"), headerRight: ()=>buttonRight()}} />

@@ -12,7 +12,6 @@ Este proyecto tiene como objetivo poder realizar una APP mobile con react native
 ```
 npx create-react-app themoviedb
 cd themoviedb
-
 ```
 
 ## Desarrollo de dependencias
@@ -31,8 +30,6 @@ $ npm i --save lodash
 $ npm i react-native-youtube
 $ npm install --save react-native-webview
 $ npm i react-native-ratings
-
-
 ```
 
 ## Modulo Babel

@@ -18,7 +18,7 @@ Este proyecto tiene como objetivo poder realizar una APP mobile con react native
 
 ### Imagen de Nuevas Peliculas
 
-![](images/4.png)
+![](images/5.png)
 
 
 ## Creación carpeta proyecto

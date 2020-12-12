@@ -2,11 +2,21 @@
 
 Este proyecto tiene como objetivo poder realizar una APP mobile con react native como desarrollo de la actividad del curso de React Native Escalab. Esta APP tiene como objetivo principal poder consumir la API de https://www.themoviedb.org/
 
+### Imagen de Inicio
+
 ![](images/1.png)
 
 ![](images/2.png)
 
+### Imagen de Peliculas Populares
+
 ![](images/3.png)
+
+### Imagen de la Pelicula
+
+![](images/4.png)
+
+### Imagen de Nuevas Peliculas
 
 ![](images/4.png)
 

@@ -3,8 +3,12 @@
 Este proyecto tiene como objetivo poder realizar una APP mobile con react native como desarrollo de la actividad del curso de React Native Escalab. Esta APP tiene como objetivo principal poder consumir la API de https://www.themoviedb.org/
 
 ![](images/1.png)
+
 ![](images/2.png)
 
+![](images/3.png)
+
+![](images/4.png)
 
 
 ## Creación carpeta proyecto
@@ -48,7 +52,7 @@ module.exports = {
 ## Ejecución Proyecto
 
 ```
-npx react-native run-android 
+$ npx react-native run-android 
 ```
 
 

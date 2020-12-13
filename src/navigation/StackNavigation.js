@@ -58,7 +58,7 @@ export default function StackNavigation(props){
             options={{title: 'Peliculas Populares', headerLeft: ()=> buttonLeft("popular"), headerRight: ()=>buttonRight()}} />
             
             <Stack.Screen name="search" component={Search} 
-            options={{title: '', headerLeft: ()=> buttonLeft("search")}} />
+            options={{title: '', headerTransparent:true, headerLeft: ()=> buttonLeft("search")}} />
             
             <Stack.Screen name="favorite" component={Favorite} 
             options={{title: '', headerLeft: ()=> buttonLeft("favorite"), headerRight: ()=>buttonRight()}} />

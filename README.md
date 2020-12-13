@@ -20,6 +20,10 @@ Este proyecto tiene como objetivo poder realizar una APP mobile con react native
 
 ![](images/5.png)
 
+### Imagen de busqueda Peliculas
+
+![](images/6.png)
+
 
 ## Creación carpeta proyecto
 

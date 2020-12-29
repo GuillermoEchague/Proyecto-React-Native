@@ -6,7 +6,7 @@ import usePreference from "../hook/usePreferences";
 
 export default function DrawerContent(props) {
     const {navigation} = props;
-    const [active, setActive]=useState("home")    
+    const [active, setActive]=useState("Login")    
     
     const {theme, toggleTheme} = usePreference();
 
@@ -24,7 +24,7 @@ export default function DrawerContent(props) {
                 <Drawer.Item label="Inicio" active={active === "home"} onPress={()=> onChangeScreen('home')}/>
                 <Drawer.Item label="Peliculas populares" active={active === "popular"} onPress={()=> onChangeScreen('popular')}/>
                 <Drawer.Item label="Nuevas peliculas" active={active === "news"} onPress={()=> onChangeScreen('news')} />
-                <Drawer.Item label="Favoritos" active={active === "favorite"} onPress={()=> onChangeScreen('favorite')} />
+                
             </Drawer.Section>
 
             <Drawer.Section title="Opciones">

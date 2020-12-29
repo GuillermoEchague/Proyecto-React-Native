@@ -6,7 +6,7 @@ import Movie from "../screens/Movie";
 import News from "../screens/News";
 import Popular from "../screens/Popular";
 import Search from "../screens/Search";
-import Favorite from "../screens/Favorite";
+import Login from "../screens/Login";
 
 
 const Stack = createStackNavigator();
@@ -45,6 +45,9 @@ export default function StackNavigation(props){
 
     return(
         <Stack.Navigator>
+            <Stack.Screen name="login" component={Login} 
+            options={{title: 'TheMovieApp'}} />
+
             <Stack.Screen name="home" component={Home} 
             options={{title: 'TheMovieApp', headerLeft: ()=> buttonLeft("home"), headerRight: ()=>buttonRight()}} />
             
@@ -60,8 +63,7 @@ export default function StackNavigation(props){
             <Stack.Screen name="search" component={Search} 
             options={{title: '', headerTransparent:true, headerLeft: ()=> buttonLeft("search")}} />
             
-            <Stack.Screen name="favorite" component={Favorite} 
-            options={{title: '', headerLeft: ()=> buttonLeft("favorite"), headerRight: ()=>buttonRight()}} />
+            
 
         </Stack.Navigator>
     )

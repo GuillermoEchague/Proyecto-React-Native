@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-export default function Favorite(){
+export default function Login(){
     return (
         <View>
-            <Text>Estamos en FAVORITO</Text>
+            <Text>Estamos en LOGIN</Text>
         </View>
     );
 }

@@ -2,27 +2,65 @@
 
 Este proyecto tiene como objetivo poder realizar una APP mobile con react native como desarrollo de la actividad del curso de React Native Escalab. Esta APP tiene como objetivo principal poder consumir la API de https://www.themoviedb.org/
 
+Las credeciales para iniciar el proyecto son:
+
+```
+**Usuario:** test.
+**Password:** test.
+
+```
+### Imagen de Login
+
+![](images/12.png)
+
+
+### Imagen de Logout
+
+![](images/15.png)
+
+![](images/16.png)
+
+
 ### Imagen de Inicio
 
 ![](images/1.png)
 
-![](images/2.png)
-
-### Imagen de Peliculas Populares
-
 ![](images/3.png)
 
-### Imagen de la Pelicula
+![](images/2.png)
 
 ![](images/4.png)
 
-### Imagen de Nuevas Peliculas
+### Imagen de Peliculas Populares
 
 ![](images/5.png)
 
+![](images/6.png)
+
+### Imagen de la Pelicula
+
+![](images/7.png)
+
+![](images/8.png)
+
+### Imagen de Nuevas Peliculas
+
+![](images/9.png)
+
+![](images/10.png)
+
 ### Imagen de busqueda Peliculas
 
-![](images/6.png)
+![](images/11.png)
+
+
+### Imagen de Registro de Usuarios
+
+Queda pendiente a cambios 
+
+![](images/9.png)
+
+![](images/10.png)
 
 
 ## Creación carpeta proyecto
@@ -48,6 +86,14 @@ $ npm i --save lodash
 $ npm i react-native-youtube
 $ npm install --save react-native-webview
 $ npm i react-native-ratings
+
+$ npm i react-redux redux
+$ npm i redux-thunk  
+$ npm i @react-native-async-storage/async-storage
+$ npm i react-native-keyboard-aware-scroll-view
+$ npm i react-native-loading-spinner-overlay
+
+
 ```
 
 ## Modulo Babel

@@ -19,8 +19,9 @@ import {NavigationContainer,
   from "@react-navigation/native";
 import Navigation from "./src/navigation/Navigation";
 import PreferencesContext from "./src/context/PreferencesContext";
-
-
+import {Provider} from "react-redux";
+import store from "./src/redux/store";
+import { login } from "./src/redux/actions";
 
 
 const App: () => React$Node = () => {
@@ -50,15 +51,24 @@ const App: () => React$Node = () => {
 
   return (
     <>
+    
     <PreferencesContext.Provider value={preference}>
     <PaperProvider theme={theme === "dark"? DarkThemePaper : DefaultThemePaper}>
       <StatusBar barStyle={theme === "dark"? "light-content" : "dark-content"}/>
+      
         <NavigationContainer theme ={theme === "dark"? DarkThemeNavigation : DefaultThemeNavigation}>
-     <Navigation/>
+          <Provider store={store}>
+          <Navigation/>
+          </Provider>
+          
+         
+            
+          
       </NavigationContainer>
-
+      
     </PaperProvider>
     </PreferencesContext.Provider>
+    
     </>
   );
 };

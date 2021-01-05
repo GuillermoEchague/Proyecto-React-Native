@@ -6,17 +6,14 @@ import usePreference from "../hook/usePreferences";
 
 export default function DrawerContent(props) {
     const {navigation} = props;
-    const [active, setActive]=useState("Login")    
+    const [active, setActive]=useState("home")    
     
     const {theme, toggleTheme} = usePreference();
-
 
     const onChangeScreen = (screen)=>{
         setActive(screen);
         navigation.navigate(screen);
     }
-
-
 
     return (
         <DrawerContentScrollView>
@@ -24,15 +21,21 @@ export default function DrawerContent(props) {
                 <Drawer.Item label="Inicio" active={active === "home"} onPress={()=> onChangeScreen('home')}/>
                 <Drawer.Item label="Peliculas populares" active={active === "popular"} onPress={()=> onChangeScreen('popular')}/>
                 <Drawer.Item label="Nuevas peliculas" active={active === "news"} onPress={()=> onChangeScreen('news')} />
+                <Drawer.Item label="Registro de Usuario" active={active === "registration"} onPress={()=> onChangeScreen('registration')} />
                 
             </Drawer.Section>
 
             <Drawer.Section title="Opciones">
                 <TouchableRipple>
+                    <>
                     <View style={styles.preference}>
                         <Text>Tema Oscuro</Text>
                         <Switch value={theme === "dark"} onValueChange={toggleTheme}/>
                     </View>
+                    <View >
+                    <Drawer.Item label="Salir" active={active === "logout"} onPress={()=> onChangeScreen('logout')} />
+                    </View>
+                    </>
                 </TouchableRipple>
             </Drawer.Section>
 

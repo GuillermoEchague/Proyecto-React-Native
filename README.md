@@ -127,3 +127,41 @@ export const API_HOST = 'https://api.themoviedb.org/3';
 export const LANG = 'es-ES';
 export const BASE_PATH_IMG = 'https://image.tmdb.org/t/p';
 ```
+
+
+## Instalar camara Solo Android
+
+```
+npm i react-native-camera
+```
+
+```
+../android -> app -> src -> buils.gradle
+
+ defaultConfig {
+        applicationId "com.themoviedb"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        missingDimensionStrategy 'react-native-camera', 'general'
+        multiDexEnabled true
+    }
+```
+
+##  En caso de Error (una posible solución)
+
+error Failed to install the app. Make sure you have the Android development environment set up: https://reactnative.dev/docs/environment-setup. Run CLI with --verbose flag for more details.
+Error: Command failed: gradlew.bat app:installDebug -PreactNativeDevServerPort=8081
+
+
+Ejecutar
+```
+npx --quiet react-native config  
+npx.cmd --quiet react-native config
+
+npm install
+
+Ejecutar 
+$ npx react-native run-android 
+```

@@ -44,7 +44,6 @@ Las credeciales para iniciar el proyecto son:
 
 ### Imagen de Registro de Usuarios
 
-Queda pendiente a cambios 
 
 ![](images/9.png)  ![](images/10.png)
 

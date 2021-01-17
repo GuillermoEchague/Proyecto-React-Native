@@ -16,38 +16,26 @@ Las credeciales para iniciar el proyecto son:
 
 ### Imagen de Logout
 
-![](images/15.png)
-
-![](images/16.png)
+![](images/15.png)  ![](images/16.png)
 
 
 ### Imagen de Inicio
 
-![](images/1.png)
+![](images/1.png)  ![](images/3.png)
 
-![](images/3.png)
-
-![](images/2.png)
-
-![](images/4.png)
+![](images/2.png)  ![](images/4.png)
 
 ### Imagen de Peliculas Populares
 
-![](images/5.png)
-
-![](images/6.png)
+![](images/5.png)  ![](images/6.png)
 
 ### Imagen de la Pelicula
 
-![](images/7.png)
-
-![](images/8.png)
+![](images/7.png)  ![](images/8.png)
 
 ### Imagen de Nuevas Peliculas
 
-![](images/9.png)
-
-![](images/10.png)
+![](images/9.png)  ![](images/10.png)
 
 ### Imagen de busqueda Peliculas
 
@@ -58,9 +46,7 @@ Las credeciales para iniciar el proyecto son:
 
 Queda pendiente a cambios 
 
-![](images/9.png)
-
-![](images/10.png)
+![](images/9.png)  ![](images/10.png)
 
 
 ## Creación carpeta proyecto
@@ -156,6 +142,7 @@ Error: Command failed: gradlew.bat app:installDebug -PreactNativeDevServerPort=8
 
 
 Ejecutar
+
 ```
 npx --quiet react-native config  
 npx.cmd --quiet react-native config
@@ -165,3 +152,30 @@ npm install
 Ejecutar 
 $ npx react-native run-android 
 ```
+
+
+## Revisar logs 
+
+```
+git log --pretty=oneline
+```
+## Cargar cambios y versiones
+
+```
+git branch -M main
+git push -u origin main
+
+           (Version) 
+git tag -a V1.0.0 -m "Mensaje"
+git push --tags
+```
+
+
+## Desinstalar posiblemente
+
+npm i react-native-animatable
+npm i axios
+npm i react-native-gesture-handler
+npm i react-native-reanimated
+npm i react-native-svg
+npm i react-native-svg-charts

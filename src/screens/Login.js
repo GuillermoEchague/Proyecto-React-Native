@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet,TextInput,TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet,TextInput,TouchableOpacity, Button} from 'react-native';
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
 import {connect} from "react-redux";
@@ -9,6 +9,7 @@ import {
   isLoginValidSelector,
   loginLoadingSelector,
 } from '../redux/selectors/loginSelector';
+
 import AntDesignIcon from 'react-native-vector-icons/AntDesign';
 
 
@@ -22,16 +23,19 @@ import AntDesignIcon from 'react-native-vector-icons/AntDesign';
         <KeyboardAwareScrollView>
           <OverlaySpinner visible={loading} color={'#2c3e50'} size="large" />
           <View style={[styles.header, {paddingTop: insets.top}]}>
-            <Text style={styles.login}>Login</Text>
+            <Text style={styles.login}>Iniciar Sesión</Text>
           </View>
           <View style={styles.inputContainer}>
             <View style={styles.textInputContainer}>
+              
               <TextInput
                 placeholder="Usuario"
                 value={user}
                 autoCapitalize="none"
                 onChangeText={(text) => updateUser(text)}
                 style={styles.textInput}
+                color={`#000000`}
+                placeholderTextColor = {`#191970`}
               />
               <TextInput
                 placeholder="*******"
@@ -40,14 +44,22 @@ import AntDesignIcon from 'react-native-vector-icons/AntDesign';
                 onChangeText={(text) => updatePassword(text)}
                 style={styles.textInput}
                 secureTextEntry
+                color={`#000000`}
+                placeholderTextColor = {`#191970`}
               />
             </View>
+           
+            
             <TouchableOpacity
               style={styles.inputSubmit}
               onPress={() => loginIn({user, password})}>
               <AntDesignIcon name="arrowright" color={'#ecf0f1'} size={60} />
+
+              
             </TouchableOpacity>
           </View>
+         
+
         </KeyboardAwareScrollView>
       );
     };
@@ -107,5 +119,8 @@ import AntDesignIcon from 'react-native-vector-icons/AntDesign';
           padding: 5,
           right: 40,
           borderRadius: 35,
+        },
+        title:{
+          fontSize:24,
         },
       });

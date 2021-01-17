@@ -29,7 +29,7 @@ const Menu = ({logout}) => {
     <View style={styles.container} >
       <TouchableOpacity onPress={logout} style={styles.button}>
         <AntDesignIcon name="logout" size={50}  color={theme === 'dark'?'#fff':'#000' } />
-        <Text style={styles.text} >Logout</Text>
+        <Text style={styles.text } >Logout</Text>
       </TouchableOpacity>
     </View>
   );

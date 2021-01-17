@@ -14,6 +14,8 @@ import { Searchbar } from 'react-native-paper';
 import { size, map } from 'lodash';
 import { searchMoviesApi } from '../api/movies';
 import { BASE_PATH_IMG } from '../utils/constants';
+import usePreferences from '../hook/usePreferences';
+import colors from '../config/colors';
 
 const { width } = Dimensions.get('window');
 
@@ -21,6 +23,7 @@ export default function Search(props) {
   const { navigation } = props;
   const [movies, setMovies] = useState(null);
   const [search, setSearch] = useState('');
+  
 
   useEffect(() => {
     if (size(search) > 2) {
@@ -38,6 +41,7 @@ export default function Search(props) {
         icon="arrow-left"
         style={styles.input}
         onChangeText={(e) => setSearch(e)}
+        
       />
       <ScrollView>
         <View style={styles.container}>

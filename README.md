@@ -179,10 +179,11 @@ git push --tags
 
 
 ## Desinstalar posiblemente
-
-npm i react-native-animatable
-npm i axios
-npm i react-native-gesture-handler
-npm i react-native-reanimated
-npm i react-native-svg
-npm i react-native-svg-charts
+```
+$ npm i react-native-animatable
+$ npm i axios
+$ npm i react-native-gesture-handler
+$ npm i react-native-reanimated
+$ npm i react-native-svg
+$ npm i react-native-svg-charts
+```

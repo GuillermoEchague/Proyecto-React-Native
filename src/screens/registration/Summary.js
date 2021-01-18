@@ -3,10 +3,13 @@ import {Text,
     View,
     StyleSheet,
     TextInput, Button} from 'react-native';
-    
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';    
 import colors from '../../config/colors';
 import usePreferences from '../../hook/usePreferences';
 import useForm from '../../hook/useForm';
+import AddPhoto from '../../components/Photo/AddPhoto';
+import {useUserInformation} from '../../context/User';
 
 const styles = StyleSheet.create({
 
@@ -55,35 +58,25 @@ const styles = StyleSheet.create({
 const Summary = () => {
         
   const {theme} = usePreferences();
-  const [name, updateName] = useState('');
-   const [email, updateEmail] = useState('');
-   const [phone, updatePhone] = useState('');
-   const [photo, updatePhoto] = useState(null); 
-           
-  //const {name, updateName, email, updateEmail,phone, updatePhone, photo} = useUserInformation();
-       
-   const initialState = {
-     name: name,
-     email:email,
-     phone:phone
-   }
-
-   const onSubmit = values =>{
-     console.log(values);
-   }
-   const {subscribe, inputs, handleSubmit} = useForm(initialState, onSubmit)
-
+   const insets = useSafeAreaInsets();
+  const {name, updateName, email, updateEmail,phone, updatePhone, photo} = useUserInformation();
+   
   return (
            
-      <View>
+    <KeyboardAwareScrollView
+    contentContainerStyle={[
+      styles.container,
+      {paddingTop: insets.top},
+    ]}>
+    
 
+        <AddPhoto uri={photo} />
         <TextInput
          placeholder="Escribe tu nombre"
-         value={inputs.name}
+         value={name}
          autoCapitalize="none"
-         onChangeText={subscribe('name')}
+         onChangeText={(text) => updateName(text)}
          style={styles.textInput}
-         labelTag="Nombre"
          color={theme==='dark'?colors.white:colors.black}
          placeholderTextColor = {theme==='dark'?colors.white:colors.black}
          
@@ -91,9 +84,9 @@ const Summary = () => {
 
     <TextInput
          placeholder="Correo"
-         value={inputs.email}
+         value={email}
          autoCapitalize="none"
-         onChangeText={subscribe('email')}
+         onChangeText={(text) => updateEmail(text)}
          style={styles.textInput}
          color={theme==='dark'?colors.white:colors.black}
          placeholderTextColor = {theme==='dark'?colors.white:colors.black}
@@ -102,16 +95,21 @@ const Summary = () => {
 
     <TextInput
          placeholder="Numero de teléfono"
-         value={inputs.phone}
+         value={phone}
          autoCapitalize="none"
-         onChangeText={subscribe('phone')}
+         onChangeText={(text) => updatePhone(text)}
          style={styles.textInput}
          color={theme==='dark'?colors.white:colors.black}
          placeholderTextColor = {theme==='dark'?colors.white:colors.black}
         />
-   <Button title='Registrar' onPress={handleSubmit}/>
+   <Button title='Registrar' onPress={()=>{
+     console.log(name);
+     console.log(email);
+     console.log(phone);
 
-   </View>
+   }}/>
+
+   </KeyboardAwareScrollView>
 
    
     );

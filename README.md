@@ -11,12 +11,12 @@ Las credeciales para iniciar el proyecto son:
 ```
 ### Imagen de Login
 
-![](images/12.png)
+![](images/18.png)  ![](images/19.png)
 
 
 ### Imagen de Logout
 
-![](images/15.png)  ![](images/16.png)
+![](images/16.png)  ![](images/17.png)
 
 
 ### Imagen de Inicio
@@ -27,19 +27,20 @@ Las credeciales para iniciar el proyecto son:
 
 ### Imagen de Peliculas Populares
 
-![](images/5.png)  ![](images/6.png)
+![](images/7.png)  ![](images/8.png)
 
 ### Imagen de la Pelicula
 
-![](images/7.png)  ![](images/8.png)
+![](images/21.png)  ![](images/22.png)
 
 ### Imagen de Nuevas Peliculas
 
-![](images/9.png)  ![](images/10.png)
+![](images/7.png)  ![](images/8.png)
+
 
 ### Imagen de busqueda Peliculas
 
-![](images/11.png)
+![](images/20.png)
 
 
 ### Imagen de Registro de Usuarios
@@ -47,6 +48,9 @@ Las credeciales para iniciar el proyecto son:
 
 ![](images/9.png)  ![](images/10.png)
 
+![](images/12.png)  ![](images/13.png)
+
+![](images/11.png) 
 
 ## Creación carpeta proyecto
 
@@ -77,7 +81,7 @@ $ npm i redux-thunk
 $ npm i @react-native-async-storage/async-storage
 $ npm i react-native-keyboard-aware-scroll-view
 $ npm i react-native-loading-spinner-overlay
-
+$ npm i @react-navigation/bottom-tabs
 
 ```
 

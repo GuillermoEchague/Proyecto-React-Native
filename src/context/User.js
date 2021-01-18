@@ -15,7 +15,7 @@ const UserHandler = ({children}) => {
         updateName,
         email,
         updateEmail,
-        phone, 
+        phone,
         updatePhone,
         photo,
         updatePhoto,
@@ -32,13 +32,13 @@ type IUser = {
   updateName?: Function,
   email?: String,
   updateEmail?: Function,
-  phone?: String, 
+  phone?: String,
   updatePhone?: Function,
   photo?: String,
   updatePhoto?: Function,
 };
 
-/*
+
 export const useUserInformation = (): IUser => {
   const context = useContext(UserContext);
 
@@ -48,4 +48,3 @@ export const useUserInformation = (): IUser => {
 
   return context;
 };
-*/

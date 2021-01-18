@@ -1,6 +1,7 @@
   
 import React, {useEffect} from "react";
 import {IconButton} from "react-native-paper";
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from "@react-navigation/stack";
 import Home from "../screens/Home";
 import Movie from "../screens/Movie";
@@ -12,6 +13,7 @@ import Login from "../screens/Login";
 import {connect} from "react-redux";
 import {isLoggedIn} from "../redux/actions"; 
 import Summary from "../screens/registration/Summary";
+import Camera from "../screens/registration/Camera";
 
 const Stack = createStackNavigator();
 
@@ -30,6 +32,7 @@ const StackNavigation = ({navigation, loggedIn, isCurrentlyLoggedIn})=>{
 
         switch(screen){
             case 'search':
+            case'camera':
             case 'movie':
             return(
                 <IconButton icon="arrow-left" onPress={()=>navigation.goBack()} />
@@ -44,6 +47,7 @@ const StackNavigation = ({navigation, loggedIn, isCurrentlyLoggedIn})=>{
 
     const buttonRight = () => {
         return(
+
             <IconButton
             icon="magnify"
             onPress={() => navigation.navigate('search')}
@@ -51,6 +55,17 @@ const StackNavigation = ({navigation, loggedIn, isCurrentlyLoggedIn})=>{
         )
     }
 
+    const buttonPhoto = () => {
+      return(
+
+          <IconButton
+          icon="camera"
+          onPress={() => navigation.navigate('camera')}
+          />
+      )
+  }
+
+  
     return(
       
         <Stack.Navigator>
@@ -72,7 +87,10 @@ const StackNavigation = ({navigation, loggedIn, isCurrentlyLoggedIn})=>{
             options={{title: '', headerTransparent:true, headerLeft: ()=> buttonLeft("search")}} />
             
             <Stack.Screen name="registration" component={Summary} 
-            options={{title: 'Registro de Usuario', headerLeft: ()=> buttonLeft("logout"), headerRight: ()=>buttonRight()}} />
+            options={{title: 'Registro de Usuario', headerLeft: ()=> buttonLeft("registration"), headerRight: ()=>buttonPhoto()}} />
+
+            <Stack.Screen name="camera" component={Camera} 
+            options={{title: 'Registro de Usuario', headerLeft: ()=> buttonLeft("camera"), headerRight: ()=>buttonRight()}} />
 
             <Stack.Screen name="logout" component={Logout} 
             options={{title: 'Salir', headerLeft: ()=> buttonLeft("logout"), headerRight: ()=>buttonRight()}} />

@@ -49,7 +49,7 @@ const AddPhoto = ({uri = null}) => {
   return (
     <View style={styles.container}>
       <TouchableHighlight
-        onPress={() => navigation.navigate('Camera')}
+        onPress={() => navigation.navigate('camera')}
         underlayColor={colors.gray}
         style={styles.circleContainer}>
         {ImagePhoto}

@@ -54,13 +54,6 @@ export const logout = () => {
   };
 };
 
-/**
- * STATISTICS
- */
 
-export const selectCountry = (country) => ({
-  type: 'SELECT_COUNTRY',
-  country,
-});
 
   

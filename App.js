@@ -20,6 +20,8 @@ import {NavigationContainer,
 import Navigation from "./src/navigation/Navigation";
 import PreferencesContext from "./src/context/PreferencesContext";
 import {Provider} from "react-redux";
+import UserHandler from "./src/context/User";
+
 import store from "./src/redux/store";
 import { login } from "./src/redux/actions";
 
@@ -58,12 +60,12 @@ const App: () => React$Node = () => {
       
         <NavigationContainer theme ={theme === "dark"? DarkThemeNavigation : DefaultThemeNavigation}>
           <Provider store={store}>
+          
+          <UserHandler>
           <Navigation/>
-          </Provider>
-          
+          </UserHandler>
          
-            
-          
+          </Provider>
       </NavigationContainer>
       
     </PaperProvider>

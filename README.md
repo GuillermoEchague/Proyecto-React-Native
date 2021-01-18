@@ -25,9 +25,6 @@ Las credeciales para iniciar el proyecto son:
 
 ![](images/2.png)  ![](images/4.png)
 
-### Imagen de Peliculas Populares
-
-![](images/7.png)  ![](images/8.png)
 
 ### Imagen de la Pelicula
 
@@ -51,6 +48,13 @@ Las credeciales para iniciar el proyecto son:
 ![](images/12.png)  ![](images/13.png)
 
 ![](images/11.png) 
+
+
+### Imagen de panel lateral
+
+
+![](images/5.png)  ![](images/6.png)
+
 
 ## Creación carpeta proyecto
 
